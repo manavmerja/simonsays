@@ -48,7 +48,7 @@ It was built to master **DOM Manipulation**, **Event Handling (Key & Touch)**, a
 
 | Desktop View | Mobile View |
 |:---:|:---:|
-| ![Desktop](screenshots/desktop.jpg) | ![Mobile](screenshots/mobile.png) |
+| ![Desktop](screenshots/desktop.jpg) | ![Mobile](screenshots/mobile.jpg) |
 
 *(Create a 'screenshots' folder and add images of your game on PC and Phone)*
 
@@ -92,6 +92,6 @@ Open index.html in your browser.
 👤 Author
 Manav Merja
 
-GitHub: @YOUR_USERNAME
+GitHub: @https://github.com/manavmerja
 
 Created with ❤️ and JavaScript.
