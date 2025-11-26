@@ -38,3 +38,33 @@ body{
 .userflash{
     background-color: green;
 }
+
+
+/* Responsive Design for Mobile (Screen less than 600px) */
+@media (max-width: 600px) {
+    .btn {
+        height: 130px;  
+        width: 130px;
+        margin: 0.8rem; 
+        border: 5px solid black; 
+    }
+
+    h1 {
+        font-size: 1.8rem; 
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    
+    .btn-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .line-one, .line-two {
+        display: flex; 
+        justify-content: center;
+    }
+}

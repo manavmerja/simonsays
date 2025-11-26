@@ -1,93 +1,97 @@
 # 🎮 Simon Says Game
 
-> A classic memory puzzle game built using **HTML, CSS, and Vanilla JavaScript**. Test your memory by repeating the sequence of flashing colors!
+> A classic memory puzzle game built using **HTML, CSS, and Vanilla JavaScript**. Now fully **Mobile Responsive**!
 
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ---
 
-## 📖 About The Project
-This project was built as part of my **Web Development learning journey**. The goal was to understand **DOM Manipulation**, **Event Handling**, and **Game Logic** implementation in JavaScript.
+## 🌐 Live Demo
+🚀 **[Play the Game Here](https://simonsays-liart.vercel.app/)**
 
-The game generates a random sequence of colors. The player must repeat the sequence correctly to advance to the next level. If the player presses the wrong color, the game ends.
+*(Works on both Laptop & Mobile)*
 
 ---
 
-## 🚀 Features
+## 📖 About The Project
+This project is a digital version of the classic "Simon" electronic memory game. The game creates a series of flashing colors and requires the user to repeat the sequence. If the user succeeds, the series becomes progressively longer and more complex.
 
--   **Interactive UI:** buttons flash white (game hint) and green (user click) for visual feedback.
--   **Level Tracking:** The game tracks your current level dynamically.
--   **Game Over Effect:** The screen flashes red when the wrong sequence is entered.
--   **Restart Functionality:** Press any key to restart immediately after losing.
--   **Responsive Design:** Centered layout using Flexbox.
+It was built to master **DOM Manipulation**, **Event Handling (Key & Touch)**, and **Game Logic** in JavaScript.
+
+---
+
+## ✨ Key Features
+
+-   **📱 Fully Responsive:** Optimized layout for Mobile and Desktop screens using CSS Media Queries.
+-   **👆 Touch Support:** Added `touchstart` events so users can play on mobile devices without a keyboard.
+-   **🧠 Dynamic Levels:** The game generates infinite random sequences, getting harder with every level.
+-   **⚡ Visual Feedback:** Buttons flash white (game hint) and green (user click) for better interactivity.
+-   **❌ Game Over Effect:** The screen flashes red to indicate a wrong move, displaying the final score.
 
 ---
 
 ## 🕹️ How to Play
 
-1.  Open the game in your browser.
-2.  Press **Any Key** on your keyboard to start the game.
-3.  Watch the button that flashes.
-4.  Click the same button.
-5.  Wait for the next sequence (Previous Color + New Color).
-6.  Repeat the sequence correctly to level up!
-7.  If you miss, your score (Level) will be displayed.
-
----
-
-## 🛠️ Tech Stack
-
--   **HTML5:** Structure of the game board.
--   **CSS3:** Styling, Flexbox layout, and Flash animations.
--   **JavaScript (ES6):** Game logic, Array manipulation, DOM events.
+1.  Open the **[Live Link](https://simonsays-liart.vercel.app/)**.
+2.  **Desktop:** Press any key on your keyboard to start.
+3.  **Mobile:** Tap anywhere on the screen to start.
+4.  Watch the sequence of flashing colors.
+5.  Repeat the sequence by clicking/tapping the colored buttons.
+6.  Advance to the next level and beat your high score!
 
 ---
 
 ## 📸 Screenshots
 
-*(Add a screenshot of your game here. Create a folder named 'screenshots' and save an image as 'gameplay.png')*
+| Desktop View | Mobile View |
+|:---:|:---:|
+| ![Desktop](screenshots/desktop.jpg) | ![Mobile](screenshots/mobile.png) |
 
-![Gameplay Preview](screenshots/gameplay.png)
+*(Create a 'screenshots' folder and add images of your game on PC and Phone)*
 
 ---
 
-## 💻 Code Highlight (Logic)
+## 🛠️ Tech Stack
 
-Here is how the game checks the user's answer against the game sequence:
+-   **HTML5:** Semantic structure.
+-   **CSS3:** Flexbox for layout & Media Queries for responsiveness.
+-   **JavaScript (ES6):** Game state management, Array logic, and Event Listeners.
+
+---
+
+## 💻 Code Highlight (Mobile Logic)
+
+Here is how I handled both Keyboard (Laptop) and Touch (Mobile) inputs to start the game:
 
 ```javascript
-function checkAns(idx) {
-    if (userseq[idx] === gameseq[idx]) {
-        if (userseq.length == gameseq.length) {
-            setTimeout(levelup, 250); // Move to next level
-        }
-    } else {
-        // Game Over Logic
-        h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Press any key to start.`;
-        document.querySelector("body").style.backgroundColor = "red";
-        setTimeout(function() {
-            document.querySelector("body").style.backgroundColor = "white";
-        }, 150);
-        reset();
+// Function to handle game start
+function startGame() {
+    if (started == false) {
+        console.log("Game Started");
+        started = true;
+        levelup();
     }
 }
 
-🚀 How to Run Locally
-Clone this repository:
+// Event Listener for Desktop (Keyboard)
+document.addEventListener("keypress", startGame);
+
+// Event Listener for Mobile (Touch)
+document.addEventListener("touchstart", startGame);
+🚀 Installation (Run Locally)
+Clone the repository:
 
 Bash
 
 git clone [https://github.com/YOUR_USERNAME/simon-says-game.git](https://github.com/YOUR_USERNAME/simon-says-game.git)
-Navigate to the folder.
-
 Open index.html in your browser.
 
 👤 Author
 Manav Merja
 
-GitHub: @https://github.com/manavmerja
+GitHub: @YOUR_USERNAME
 
-Created with ❤️ while learning JavaScript.
+Created with ❤️ and JavaScript.

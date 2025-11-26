@@ -11,14 +11,19 @@ let btnsArray = Array.from(btns).map(btn => btn.classList[1]);
 
 
 // Add event listener to each button
-
-document.addEventListener("keypress", function () {
+function startGame() {
     if (started == false) {
         console.log("Game Started");
         started = true;
         levelup();
     }
-});
+}
+
+// Laptop ke liye (Keyboard)
+document.addEventListener("keypress", startGame);
+
+// Mobile ke liye (Touch)
+document.addEventListener("touchstart", startGame);
 
 function gameFlash(btn) {
     btn.classList.add("flash");
