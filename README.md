@@ -94,4 +94,4 @@ Manav Merja
 
 GitHub: @https://github.com/manavmerja
 
-Created with ❤️ and JavaScript.
+Created with JavaScript.
