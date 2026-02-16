@@ -89,9 +89,9 @@ Bash
 git clone [https://github.com/YOUR_USERNAME/simon-says-game.git](https://github.com/YOUR_USERNAME/simon-says-game.git)
 Open index.html in your browser.
 
-👤 Author
+ Author
 Manav Merja
 
 GitHub: @https://github.com/manavmerja
 
-Created with JavaScript.
+Created with JavaScript. 
