@@ -88,4 +88,4 @@ Manav Merja
 
 GitHub: @https://github.com/manavmerja
 
-Created with JavaScript. 
+Created with JavaScript.
